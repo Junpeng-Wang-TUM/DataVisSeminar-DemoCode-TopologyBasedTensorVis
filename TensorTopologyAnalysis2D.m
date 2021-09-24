@@ -722,7 +722,6 @@ function val = AngleTerminationCondition(dirct1, dirct2)
 end
 
 function targetDirection = DirectionSelecting(originalVec, Vec1, Vec2)
-	normOriVec = norm(originalVec); normVec1 = norm(Vec1); normVec2 = norm(Vec2);
 	angle1 = acos(originalVec*Vec1');
 	angle2 = acos(originalVec*Vec2');
 	if angle1 < angle2

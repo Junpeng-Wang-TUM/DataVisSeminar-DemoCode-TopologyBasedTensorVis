@@ -2,7 +2,7 @@
 %%Seminor Topic: Topology-based Tensor Field Visualization
 %%Author: Junpeng Wang (junpeng.wang@tum.de)
 %%Date: 2021-09-14
-clear all
+clear
 clc
 
 stressfileName = './data/cantilever2D_R500_iLoad5.vtk';
