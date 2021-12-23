@@ -5,6 +5,6 @@
 clear
 clc
 
-stressfileName = './data/cantilever2D_R500_iLoad5.vtk';
+stressfileName = './data/cantilever2D_R500_iLoad5.carti';
 
 TensorTopologyAnalysis2D(stressfileName);

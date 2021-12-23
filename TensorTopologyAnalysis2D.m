@@ -54,11 +54,13 @@ function LoadStressField(fileName)
 	
 	%%read mesh and cartesian stress field
 	fid = fopen(fileName, 'r');
-	fgetl(fid); fgetl(fid); fgetl(fid); 
-	tmp = fscanf(fid, '%s', 1);	
-	meshType = fscanf(fid, '%s', 1);
-	
-	tmp = fscanf(fid, '%s', 1);
+	idx = 1;
+	while idx
+		idx = idx + 1;
+		tmp = fscanf(fid, '%s', 1);
+		if strcmp(tmp, 'Resolution:'), idx=0; break; end
+		if idx>100, error('Wrong Input!'); end
+	end
 	tmp = fscanf(fid, '%d %d', [1 2]);
 	nelx_ = tmp(1); nely_ = tmp(2); 
 	tmp = fscanf(fid, '%s', 1);
